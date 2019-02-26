@@ -6,14 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  oddNumbers: number[] = [];
-  evenNumbers: number[] = [];
+  currentNavTarget: string = 'recipe';
+  // oddNumbers: number[] = [];
+  // evenNumbers: number[] = [];
 
-  onIntervalFired(firedNumber: number) {
-    if (firedNumber % 2 === 0) {
-      this.evenNumbers.push(firedNumber);
-    } else {
-      this.oddNumbers.push(firedNumber);
-    }
+  // onIntervalFired(firedNumber: number) {
+  //   if (firedNumber % 2 === 0) {
+  //     this.evenNumbers.push(firedNumber);
+  //   } else {
+  //     this.oddNumbers.push(firedNumber);
+  //   }
+  // }
+
+  onNavigate(navTarget: string) {
+    this.currentNavTarget = navTarget;
   }
 }

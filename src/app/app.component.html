@@ -1,11 +1,11 @@
-<app-header></app-header>
+<app-header (navSelected)="onNavigate($event)"></app-header>
 <div class='container'>
   <div class='row'>
     <div class='col-md-12'>
-      <!-- <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list> -->
+      <app-recipes *ngIf="currentNavTarget === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="currentNavTarget !== 'recipe'"></app-shopping-list>
     </div>
-    <div class="col-xs-12">
+    <!-- <div class="col-xs-12">
       <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
       <hr />
       <div class="row">
@@ -18,6 +18,6 @@
           </app-odd>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
