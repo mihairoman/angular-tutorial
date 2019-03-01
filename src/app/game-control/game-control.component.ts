@@ -7,7 +7,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
   counter: number = 0;
-  interval: NodeJS.Timer;
+  interval: number;
   @Output() intervalFired = new EventEmitter<number>();
 
   constructor() { }
@@ -16,7 +16,7 @@ export class GameControlComponent implements OnInit {
   }
 
   onStartGame() {
-    this.interval = setInterval(() => {
+    this.interval = window.setInterval(() => {
       this.intervalFired.emit(this.counter++)
     }, 1000)
   }
