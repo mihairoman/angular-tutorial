@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentNavTarget: string = 'recipe';
+  currentNavTarget = 'recipe';
   // oddNumbers: number[] = [];
   // evenNumbers: number[] = [];
 
