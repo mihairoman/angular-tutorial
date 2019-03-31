@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentNavTarget = 'recipe';
   // oddNumbers: number[] = [];
   // evenNumbers: number[] = [];
 
@@ -18,7 +17,4 @@ export class AppComponent {
   //   }
   // }
 
-  onNavigate(navTarget: string) {
-    this.currentNavTarget = navTarget;
-  }
 }
