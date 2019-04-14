@@ -21,6 +21,8 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RecipeService } from './recipes/recipe.service';
 import { ReversePipe } from './shared/pipes/reverse.pipe';
 import { SortPipe } from './shared/pipes/sort.pipe';
+import { HttpModule } from '@angular/http';
+import { DataStorageService } from './shared/services/datastorage.service';
 
 @NgModule({
   declarations: [
@@ -44,10 +46,11 @@ import { SortPipe } from './shared/pipes/sort.pipe';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [ShoppingListService, RecipeService],
+  providers: [ShoppingListService, RecipeService, DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
